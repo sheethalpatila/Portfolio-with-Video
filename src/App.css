@@ -1,0 +1,101 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1; /* Slight transparency to dim the video */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 5% 0;
+}
+
+.NameTag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3px 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Increase transparency for more video visibility */
+  color: white;
+  margin: 0;
+  border-bottom-right-radius: 3px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 3px 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Increase transparency for the footer */
+  color: white;
+  margin: 0;
+  border-top-left-radius: 3px;
+}
+
+.footer-content {
+  display: flex;
+  gap: 15px; /* Controls the spacing between links */
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white shadow-lg overflow-hidden;
+  z-index: 1;
+  border-radius: 8px 8px 8px 8px;
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white to let video show */
+}
+
+.card-header {
+  @apply text-white p-1;
+  background-color: rgba(0, 0, 0, 0.5); /* Slight transparency */
+  z-index: 1;
+  font-size: 10px;
+}
+
+.card-title {
+  @apply text-sm pl-2;
+}
+
+.card-body {
+  @apply p-2;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker transparent black */
+}
+
+.card-text {
+  @apply text-gray-100; /* Use lighter text to contrast with the dark background */
+}
+
+
+.vertical-navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

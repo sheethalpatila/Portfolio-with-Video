@@ -1,0 +1,38 @@
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 20px;
+    color: white;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 50%; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .animated-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: rotate 5s linear infinite;
+  }
+  
+  .image-container:hover .animated-image {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
