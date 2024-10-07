@@ -7,7 +7,7 @@ import VerticalNav from './comonents/VerticleNav';
 const App = () => {
   return (
     <div className="app">
-      <VerticalNav />
+      {/* <VerticalNav /> */}
       <video className="background-video" autoPlay loop muted>
         <source src="/intro.mp4" type="video/mp4" />
         Your browser does not support the video tag.
